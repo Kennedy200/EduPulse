@@ -1,0 +1,186 @@
+/* =========================
+   Section Layout
+   ========================= */
+.sectionWrapper {
+  width: 100%;
+  background-color: #0B1221; /* Deep Dark Navy (Matches screenshot) */
+  padding: 6rem 5%;
+  font-family: 'Inter', sans-serif;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px; /* Constrain width for better readability */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* =========================
+   Badge Styles
+   ========================= */
+.badgeWrapper {
+  margin-bottom: 2.5rem;
+}
+
+.badge {
+  background-color: #1E293B; /* Lighter navy pill */
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid #334155;
+  color: #E2E8F0;
+}
+
+.ngCode {
+  color: #64748B;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+/* =========================
+   Text Content
+   ========================= */
+.quoteText {
+  font-size: 2rem;
+  line-height: 1.4;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  max-width: 900px;
+  color: #ffffff;
+}
+
+.authorContainer {
+  margin-bottom: 4rem;
+}
+
+.authorName {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #38BDF8; /* Sky Blue accent for name */
+  margin-bottom: 0.3rem;
+}
+
+.authorTitle {
+  font-size: 0.95rem;
+  color: #94A3B8; /* Slate Grey */
+}
+
+/* =========================
+   Stats Grid
+   ========================= */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+.statCard {
+  background-color: #162032; /* Slightly lighter than bg */
+  border-radius: 16px;
+  padding: 2.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #1E293B;
+  transition: transform 0.3s ease;
+}
+
+.statCard:hover {
+  border-color: #334155;
+  transform: translateY(-5px);
+}
+
+.statValue {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.blueAccent {
+  color: #0EA5E9; /* Specific Blue color for 94% */
+}
+
+.statLabel {
+  font-size: 0.9rem;
+  color: #94A3B8;
+  font-weight: 500;
+}
+
+/* =========================
+   Features Grid
+   ========================= */
+.featuresContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 Columns */
+  width: 100%;
+  gap: 2rem;
+  max-width: 900px;
+}
+
+.featureColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-align: left;
+  color: #E2E8F0;
+  font-size: 1rem;
+}
+
+/* The Blue Check Icon */
+.checkIcon {
+  color: #0EA5E9; /* Bright Blue */
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* =========================
+   Mobile Responsiveness
+   ========================= */
+@media (max-width: 768px) {
+  .sectionWrapper {
+    padding: 4rem 5%;
+  }
+
+  .quoteText {
+    font-size: 1.5rem;
+  }
+
+  /* Stack Stats Vertically */
+  .statsGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .statCard {
+    padding: 2rem;
+  }
+
+  /* Stack Features Vertically */
+  .featuresContainer {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .featureColumn {
+    gap: 1.5rem;
+  }
+}

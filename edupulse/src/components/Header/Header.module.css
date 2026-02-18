@@ -1,0 +1,357 @@
+/* =========================
+   Global Reset & Wrapper
+   ========================= */
+/* CRITICAL FIX: This ensures padding doesn't add to the width */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.headerWrapper {
+  width: 100%;
+  min-height: 100vh; /* Full viewport height */
+  background-color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden; /* Prevents horizontal scrollbar */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================
+   Navbar Styles
+   ========================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 5%;
+  width: 100%;
+  max-width: 1280px; /* Constrain width on large screens */
+  margin: 0 auto;
+  position: relative;
+  z-index: 50;
+}
+
+/* Logo Section */
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0; /* Prevents logo from squishing */
+}
+
+.logoImage {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logoText {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0F172A;
+  letter-spacing: -0.02em;
+}
+
+/* Desktop Navigation Links */
+.navLinks {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navLinkItem {
+  text-decoration: none;
+  color: #4B5563;
+  font-weight: 500;
+  font-size: 0.95rem;
+  position: relative;
+  transition: color 0.3s ease;
+  white-space: nowrap; /* Prevents text wrap */
+}
+
+.navLinkItem:hover {
+  color: #0F172A;
+}
+
+/* Underline Animation */
+.navLinkItem::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -6px;
+  left: 0;
+  background-color: #0F172A;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.navLinkItem:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Desktop Auth Buttons */
+.desktopAuth {
+  display: block;
+}
+
+.loginBtn {
+  background-color: transparent;
+  border: 2px solid #0F172A;
+  color: #0F172A;
+  padding: 0.6rem 1.8rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.loginBtn:hover {
+  background-color: #0F172A;
+  color: #ffffff;
+}
+
+/* Hamburger Icon */
+.mobileMenuIcon {
+  display: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+/* =========================
+   Mobile Menu Overlay
+   ========================= */
+.mobileMenuOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 5%;
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.showMenu {
+  transform: translateX(0);
+}
+
+.mobileMenuHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+.closeIcon {
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobileNavLinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+  width: 100%;
+  align-items: center;
+}
+
+.mobileNavLinks a {
+  text-decoration: none;
+  color: #0F172A;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.mobileLoginBtn {
+  width: 100%;
+  max-width: 300px;
+  padding: 1rem;
+  background-color: #0F172A;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+/* =========================
+   Hero Section Styles (FIXED)
+   ========================= */
+.heroContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 5% 4rem 5%; /* Reduced top padding */
+  max-width: 1280px; /* Restrict max width */
+  margin: 0 auto; /* Center the container */
+  gap: 2rem; /* Reduce gap to fit screen better */
+  width: 100%;
+  flex: 1; /* Allows centering vertically */
+}
+
+/* Left Side Content */
+.heroContent {
+  flex: 1;
+  max-width: 550px; /* Constrain text width */
+  z-index: 10;
+}
+
+.badge {
+  display: inline-block;
+  background-color: #F3F4F6;
+  color: #9CA3AF;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.headline {
+  /* Adjusted font size for better fit on laptops */
+  font-size: 3.5rem; 
+  line-height: 1.1;
+  color: #0F172A;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.subheadline {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #64748B;
+  margin-bottom: 2.5rem;
+  max-width: 90%; /* Stops text from hitting image */
+}
+
+.getStartedBtn {
+  background-color: #0F172A;
+  color: #ffffff;
+  padding: 0.9rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  white-space: nowrap;
+}
+
+.getStartedBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.15);
+}
+
+.arrow {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+/* Right Side Image (FIXED) */
+.heroVisual {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  max-width: 600px; /* Hard limit on image width */
+}
+
+.heroVisual img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  /* Soft shadow for depth */
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.08)); 
+}
+
+/* =========================
+   Mobile Responsiveness
+   ========================= */
+@media (max-width: 1024px) {
+  /* On tablets/smaller laptops, stack it or reduce sizes */
+  .headline {
+    font-size: 3rem;
+  }
+  .heroContainer {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 968px) {
+  .navLinks, .desktopAuth {
+    display: none;
+  }
+
+  .mobileMenuIcon {
+    display: flex;
+    align-items: center;
+  }
+
+  .heroContainer {
+    flex-direction: column-reverse; /* Put image on top on mobile? Or standard column */
+    flex-direction: column;
+    text-align: center;
+    padding-top: 2rem;
+  }
+
+  .heroContent {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .subheadline {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .heroVisual {
+    justify-content: center;
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .heroVisual img {
+    max-width: 80%; /* Don't be too huge on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .headline {
+    font-size: 2.5rem;
+  }
+  
+  .getStartedBtn {
+    width: 100%;
+    justify-content: center;
+  }
+}

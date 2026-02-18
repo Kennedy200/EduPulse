@@ -1,0 +1,32 @@
+.dashboardLayout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #F8FAFC; /* Light Grey Background for whole app */
+  font-family: 'Inter', sans-serif;
+}
+
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 260px; /* Push content to right of Sidebar */
+  width: calc(100% - 260px);
+  transition: margin-left 0.3s;
+}
+
+.pageContainer {
+  padding: 2rem;
+  flex: 1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .mainContent {
+    margin-left: 0; /* Remove margin on mobile */
+    width: 100%;
+  }
+
+  .pageContainer {
+    padding: 1.5rem;
+  }
+}

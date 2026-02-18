@@ -1,0 +1,16 @@
+# Python
+venv/
+*.pyc
+__pycache__/
+db.sqlite3
+
+# Node/React
+edupulse/node_modules/
+edupulse/dist/
+
+# Production
+staticfiles/
+.env
+
+# Docker
+.dockerignore

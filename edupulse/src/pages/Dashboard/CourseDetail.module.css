@@ -1,0 +1,112 @@
+.container { padding-top: 1rem; position: relative; }
+.backBtn { background: none; border: none; display: flex; align-items: center; gap: 0.5rem; color: #64748B; cursor: pointer; margin-bottom: 2rem; font-weight: 600; }
+.headerRow { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2rem; }
+.courseCode { background-color: #E0F2FE; color: #0EA5E9; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: 700; }
+.courseTitle { font-size: 2rem; color: #0F172A; margin-top: 0.5rem; }
+.addBtn { background-color: #0F172A; color: white; border: none; padding: 0.8rem 1.2rem; border-radius: 8px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px; }
+
+/* Table Styles */
+.tableCard { background: white; border-radius: 12px; border: 1px solid #E2E8F0; overflow: hidden; }
+.table { width: 100%; border-collapse: collapse; }
+.table th { text-align: left; padding: 1rem 1.5rem; background-color: #F8FAFC; color: #64748B; font-size: 0.85rem; font-weight: 600; border-bottom: 1px solid #E2E8F0; }
+.table td { padding: 1rem 1.5rem; border-bottom: 1px solid #E2E8F0; color: #334155; }
+.nameCell { font-weight: 600; color: #0F172A; }
+.emptyState { text-align: center; color: #94A3B8; padding: 3rem; font-style: italic; }
+
+/* Badges */
+.badge { padding: 0.3rem 0.8rem; border-radius: 50px; font-size: 0.75rem; font-weight: 700; }
+.green { background-color: #DCFCE7; color: #166534; }
+.yellow { background-color: #FEF3C7; color: #B45309; }
+.red { background-color: #FEE2E2; color: #991B1B; }
+
+/* Modal */
+.modalOverlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; z-index: 1000; }
+.modal { background: white; padding: 2rem; border-radius: 16px; width: 400px; }
+.inputGroup { margin-bottom: 1rem; display: flex; flex-direction: column; gap: 0.5rem; }
+.inputGroup input { padding: 0.8rem; border: 1px solid #E2E8F0; border-radius: 8px; }
+.modalActions { display: flex; justify-content: flex-end; gap: 1rem; margin-top: 1.5rem; }
+.cancelBtn { background: none; border: 1px solid #CBD5E1; padding: 0.6rem 1rem; border-radius: 6px; cursor: pointer; }
+.saveBtn { background: #0F172A; color: white; border: none; padding: 0.6rem 1rem; border-radius: 6px; cursor: pointer; }
+
+/* Action Buttons Container */
+.actionCell {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Update Button */
+.updateBtn {
+  background: none;
+  border: 1px solid #CBD5E1;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.2s;
+}
+.updateBtn:hover {
+  background: #F1F5F9;
+  border-color: #94A3B8;
+}
+
+/* Email Button */
+.emailBtn {
+  background-color: #FEE2E2; /* Light Red */
+  color: #EF4444; /* Dark Red */
+  border: 1px solid #FECACA;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.emailBtn:hover {
+  background-color: #EF4444;
+  color: white;
+}
+
+/* Modal Subtitle */
+.modalSub {
+  font-size: 0.9rem;
+  color: #64748B;
+  margin-bottom: 1.5rem;
+}
+
+/* Analyze Button */
+.analyzeBtn {
+  background: #0EA5E9; /* Sky Blue */
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.analyzeBtn:hover {
+  background: #0284C7;
+}
+
+/* Upload Button */
+.uploadBtn {
+  background-color: #ffffff;
+  color: #0F172A;
+  border: 1px solid #CBD5E1;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.uploadBtn:hover {
+  background-color: #F8FAFC;
+  border-color: #0F172A;
+}

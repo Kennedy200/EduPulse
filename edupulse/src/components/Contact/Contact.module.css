@@ -1,0 +1,269 @@
+/* =========================
+   Section Layout
+   ========================= */
+.sectionWrapper {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 6rem 5%;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+/* =========================
+   Left Column Styles
+   ========================= */
+.leftColumn {
+  flex: 1;
+  max-width: 500px;
+  padding-top: 2rem;
+}
+
+.badge {
+  color: #0EA5E9; /* Sky Blue */
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.headline {
+  font-size: 3rem;
+  line-height: 1.1;
+  color: #0F172A; /* Dark Navy */
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.subheadline {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #64748B; /* Grey */
+  margin-bottom: 3rem;
+}
+
+/* Features List */
+.featuresList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.iconBox {
+  width: 48px;
+  height: 48px;
+  background-color: #F1F5F9; /* Light Grey BG */
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: #0F172A;
+}
+
+/* Optional: Slight color variation for icon 2 like in design */
+.iconBlue {
+  background-color: #E0F2FE;
+  color: #0EA5E9;
+}
+
+.featureText {
+  display: flex;
+  flex-direction: column;
+}
+
+.featureText strong {
+  font-size: 1rem;
+  color: #0F172A;
+  margin-bottom: 0.2rem;
+}
+
+.featureText span {
+  font-size: 0.85rem;
+  color: #64748B;
+}
+
+/* Trusted By Section */
+.trustSection {
+  border-top: 1px solid #E2E8F0;
+  padding-top: 2rem;
+}
+
+.trustLabel {
+  font-size: 0.85rem;
+  color: #64748B;
+  margin-bottom: 1rem;
+}
+
+.trustLogos {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.trustLogos span {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #94A3B8; /* Muted text for logos */
+}
+
+/* =========================
+   Right Column (Form)
+   ========================= */
+.rightColumn {
+  flex: 1;
+  max-width: 550px;
+}
+
+.formCard {
+  background-color: #ffffff;
+  padding: 3rem;
+  border-radius: 20px;
+  /* Deep shadow for floating effect */
+  box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.1); 
+  border: 1px solid #F1F5F9;
+}
+
+.formTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin-bottom: 0.5rem;
+}
+
+.formSubtitle {
+  font-size: 0.95rem;
+  color: #64748B;
+  margin-bottom: 2.5rem;
+}
+
+/* Form Fields */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.inputGroup label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #0F172A;
+}
+
+.inputGroup input,
+.inputGroup select,
+.inputGroup textarea {
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #E2E8F0;
+  background-color: #ffffff; /* Or #F8FAFC if you prefer light grey input bg */
+  font-size: 0.95rem;
+  color: #334155;
+  font-family: 'Inter', sans-serif;
+  transition: border-color 0.2s;
+  outline: none;
+}
+
+.inputGroup input::placeholder,
+.inputGroup textarea::placeholder {
+  color: #94A3B8;
+}
+
+.inputGroup input:focus,
+.inputGroup select:focus,
+.inputGroup textarea:focus {
+  border-color: #0EA5E9; /* Blue focus ring */
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+}
+
+.charCount {
+  position: absolute;
+  bottom: -1.2rem;
+  right: 0;
+  font-size: 0.75rem;
+  color: #94A3B8;
+}
+
+/* Submit Button */
+.submitBtn {
+  margin-top: 1rem;
+  background-color: #0F172A;
+  color: #ffffff;
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.submitBtn:hover {
+  background-color: #1E293B;
+}
+
+.arrowIcon {
+  font-size: 1.2rem;
+}
+
+/* =========================
+   Mobile Responsiveness
+   ========================= */
+@media (max-width: 968px) {
+  .container {
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .leftColumn, .rightColumn {
+    max-width: 100%;
+  }
+
+  .headline {
+    font-size: 2.5rem;
+  }
+
+  .formCard {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .headline {
+    font-size: 2rem;
+  }
+  
+  .formCard {
+    padding: 1.5rem;
+  }
+}

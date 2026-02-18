@@ -1,0 +1,162 @@
+/* Sidebar Container */
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  background-color: #0F172A; /* Deep Navy */
+  color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-right: 1px solid #1E293B;
+}
+
+/* Header */
+.header {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  border-bottom: 1px solid #1E293B;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 28px;
+}
+
+.logoText {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  color: #94A3B8;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none; /* Hidden on Desktop */
+}
+
+/* Navigation */
+.nav {
+  flex: 1;
+  padding: 2rem 1rem;
+  overflow-y: auto;
+}
+
+.menuLabel {
+  font-size: 0.75rem;
+  color: #64748B;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0.8rem 1rem;
+  color: #94A3B8;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.link:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+}
+
+.active {
+  background-color: #0EA5E9; /* Sky Blue */
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3); /* Glow effect */
+}
+
+.active:hover {
+  background-color: #0284C7;
+}
+
+.icon {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Footer (Logout) */
+.footer {
+  padding: 1.5rem;
+  border-top: 1px solid #1E293B;
+}
+
+.logoutBtn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(239, 68, 68, 0.1); /* Red Tint */
+  color: #EF4444;
+  border: none;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.logoutBtn:hover {
+  background: #EF4444;
+  color: #ffffff;
+}
+
+/* Mobile Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 900;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s;
+}
+
+.showOverlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Responsive Logic */
+@media (max-width: 1024px) {
+  .sidebar {
+    transform: translateX(-100%); /* Hide by default on mobile */
+  }
+
+  .open {
+    transform: translateX(0); /* Slide in */
+  }
+
+  .closeBtn {
+    display: block; /* Show close button on mobile */
+  }
+}

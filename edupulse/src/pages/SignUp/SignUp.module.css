@@ -1,0 +1,226 @@
+.pageWrapper {
+  width: 100%;
+  height: 100vh; /* Fixed height for Desktop */
+  background-color: #F8FAFC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-family: 'Inter', sans-serif;
+  padding: 0;
+  overflow: hidden; /* Hides scrollbar on desktop */
+}
+
+.backBtn {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #64748B;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+  z-index: 10;
+}
+
+.backBtn:hover {
+  color: #0F172A;
+}
+
+.cardWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* Removed margin-top to let flexbox center it */
+}
+
+.signupCard {
+  background: #ffffff;
+  width: 100%;
+  max-width: 500px;
+  padding: 2.5rem;
+  border-radius: 24px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+  border: 1px solid #E2E8F0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header Styles */
+.logoHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.logo {
+  height: 32px;
+}
+
+.logoText {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0F172A;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.subtitle {
+  color: #64748B;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Form Styles */
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  width: 100%;
+}
+
+.inputGroup label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.inputGroup input {
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #E2E8F0;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+  background-color: #fff;
+  font-family: 'Inter', sans-serif;
+  color: #334155;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Custom Select Dropdown Styling */
+.selectWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.selectInput {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  padding: 0.8rem 1rem;
+  padding-right: 2.5rem;
+  border-radius: 8px;
+  border: 1px solid #E2E8F0;
+  font-size: 0.95rem;
+  background-color: #fff;
+  color: #334155;
+  font-family: 'Inter', sans-serif;
+  outline: none;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2364748B'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3F%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.8rem center;
+  background-size: 1rem;
+  box-sizing: border-box;
+}
+
+.inputGroup input:focus,
+.selectInput:focus {
+  border-color: #0EA5E9;
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+}
+
+.row {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+.row .inputGroup {
+  flex: 1;
+}
+
+.submitBtn {
+  background-color: #0F172A;
+  color: white;
+  padding: 0.9rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.2s;
+}
+
+.submitBtn:hover {
+  background-color: #1E293B;
+}
+
+.footer {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #64748B;
+}
+
+.link {
+  color: #0EA5E9;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+  .pageWrapper {
+    height: auto; /* Allow scroll on mobile */
+    min-height: 100vh;
+    padding: 1rem;
+    overflow-y: auto; 
+  }
+
+  .backBtn {
+    top: 1.5rem;
+    left: 1rem;
+  }
+  
+  .cardWrapper {
+    margin-top: 4rem;
+  }
+
+  .signupCard {
+    padding: 1.5rem;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+}

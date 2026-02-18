@@ -1,0 +1,192 @@
+/* =========================
+   Section Layout
+   ========================= */
+.sectionWrapper {
+  width: 100%;
+  background-color: #F8FAFC; /* Very light blue-grey background */
+  padding: 5rem 5%;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headerContainer {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.badge {
+  color: #0EA5E9; /* Bright Sky Blue */
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.headline {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  color: #0F172A; /* Dark Navy */
+  font-weight: 800;
+}
+
+/* =========================
+   Cards Container
+   ========================= */
+.cardsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* =========================
+   Card Styles (Updated for Sleek Plan Look)
+   ========================= */
+.card {
+  background-color: #ffffff;
+  border-radius: 24px; /* Slightly rounder for modern look */
+  padding: 2.5rem 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 400px;
+  
+  /* The "Sleek Plan Card" Styling */
+  border: 1px solid #E2E8F0; /* Subtle grey border */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.02); /* Very soft shadow */
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect: Lifts up and shadow increases */
+.card:hover {
+  transform: translateY(-8px);
+  border-color: #CBD5E1; /* Border gets slightly darker */
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.03);
+}
+
+/* Card Header (Icon only now) */
+.cardHeader {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.iconBox {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #0F766E, #115E59); /* Teal Gradient */
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 12px rgba(15, 118, 110, 0.2); /* Glow effect on icon */
+}
+
+/* Card Text */
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin-bottom: 1rem;
+}
+
+.cardDescription {
+  font-size: 0.95rem;
+  color: #64748B;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  flex-grow: 1; /* Pushes bottom widgets down */
+}
+
+/* =========================
+   Card Specific Widgets (Bottom)
+   ========================= */
+
+/* Step 1: Tags */
+.tagsContainer {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background-color: #F1F5F9;
+  color: #475569;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #E2E8F0;
+}
+
+/* Step 2: Processing */
+.processingIndicator {
+  color: #0F766E;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dots {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
+/* Step 3: Alert Box */
+.alertBox {
+  background-color: #E0F2FE; /* Light Blue */
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  border: 1px solid #BAE6FD;
+}
+
+.alertDot {
+  width: 8px;
+  height: 8px;
+  background-color: #0EA5E9;
+  border-radius: 50%;
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.alertText {
+  font-size: 0.75rem;
+  color: #334155;
+  line-height: 1.4;
+}
+
+.alertText strong {
+  color: #0F172A;
+}
+
+/* =========================
+   Mobile Responsiveness
+   ========================= */
+@media (max-width: 968px) {
+  .cardsContainer {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+
+  .card {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .headline {
+    font-size: 2rem;
+  }
+}

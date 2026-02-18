@@ -1,0 +1,129 @@
+.topbar {
+  height: 70px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #E2E8F0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 500;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.menuBtn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #64748B;
+  cursor: pointer;
+  display: none; /* Hidden on Desktop */
+}
+
+.pageTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0F172A;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.iconBtn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #64748B;
+  cursor: pointer;
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  background-color: #EF4444;
+  color: white;
+  font-size: 0.6rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.profile:hover {
+  background-color: #F1F5F9;
+}
+
+.avatarImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  background-color: #E0F2FE; /* Light Blue */
+  color: #0EA5E9; /* Darker Blue Text */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #0F172A;
+}
+
+.role {
+  font-size: 0.75rem;
+  color: #64748B;
+  text-transform: capitalize;
+}
+
+@media (max-width: 1024px) {
+  .menuBtn {
+    display: block;
+  }
+  
+  .userInfo {
+    display: none; /* Hide name on small screens, show avatar only */
+  }
+  
+  .topbar {
+    padding: 0 1rem;
+  }
+}

@@ -1,0 +1,175 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.loading {
+  padding: 2rem;
+  text-align: center;
+  color: #64748B;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0F172A;
+}
+
+.subtitle {
+  color: #64748B;
+  font-size: 0.95rem;
+}
+
+.addBtn {
+  background-color: #0F172A;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.addBtn:hover {
+  background-color: #1E293B;
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Course Card */
+.card {
+  background: white;
+  border-radius: 16px;
+  border: 1px solid #E2E8F0;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.iconBox {
+  width: 48px;
+  height: 48px;
+  background-color: #E0F2FE;
+  color: #0EA5E9;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.courseCode {
+  background-color: #F1F5F9;
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #475569;
+  height: fit-content;
+}
+
+.courseTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+.cardFooter {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #F1F5F9;
+  padding-top: 1rem;
+}
+
+.studentCount {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #64748B;
+  font-size: 0.9rem;
+}
+
+.viewBtn {
+  background: none;
+  border: none;
+  color: #0F172A;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.viewBtn:hover {
+  text-decoration: underline;
+}
+
+/* Empty State */
+.emptyState {
+  background: white;
+  padding: 4rem;
+  border-radius: 16px;
+  border: 1px dashed #CBD5E1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.emptyIcon {
+  font-size: 3rem;
+  color: #CBD5E1;
+  margin-bottom: 1rem;
+}
+
+.outlineBtn {
+  margin-top: 1.5rem;
+  background: transparent;
+  border: 1px solid #0F172A;
+  color: #0F172A;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.outlineBtn:hover {
+  background: #F8FAFC;
+}

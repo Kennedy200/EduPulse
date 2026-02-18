@@ -1,0 +1,52 @@
+.container { max-width: 700px; margin: 0 auto; }
+.title { font-size: 1.5rem; font-weight: 700; color: #0F172A; margin-bottom: 2rem; }
+
+.card { 
+  background: white; 
+  padding: 2.5rem; 
+  border-radius: 16px; 
+  border: 1px solid #E2E8F0; 
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.header { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem; }
+.avatar { 
+  width: 80px; 
+  height: 80px; 
+  background-color: #0F172A; 
+  color: white; 
+  font-size: 2rem; 
+  font-weight: 700; 
+  border-radius: 50%; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+}
+.name { font-size: 1.5rem; color: #0F172A; margin-bottom: 0.2rem; }
+.role { color: #64748B; font-weight: 500; font-size: 0.9rem; }
+
+.divider { border: 0; border-top: 1px solid #F1F5F9; margin-bottom: 2rem; }
+
+.formGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.section { margin-bottom: 0.5rem; }
+.section label { display: block; font-size: 0.85rem; font-weight: 600; color: #64748B; margin-bottom: 0.5rem; }
+.input { width: 100%; padding: 0.9rem; border: 1px solid #E2E8F0; border-radius: 8px; background: #F8FAFC; color: #334155; font-weight: 500; }
+
+.logoutBtn { 
+  width: 100%; 
+  background: #EF4444; 
+  color: white; 
+  padding: 1rem; 
+  border: none; 
+  border-radius: 8px; 
+  font-weight: 600; 
+  cursor: pointer; 
+  margin-top: 2rem; 
+  transition: background 0.2s;
+}
+.logoutBtn:hover { background: #DC2626; }
+
+@media (max-width: 600px) {
+  .formGrid { grid-template-columns: 1fr; }
+  .header { flex-direction: column; text-align: center; }
+}
