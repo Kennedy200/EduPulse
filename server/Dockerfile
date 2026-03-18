@@ -20,4 +20,5 @@ COPY server/ .
 # Collect static files
 RUN python manage.py collectstatic --noinput
 
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "core.wsgi:application"]
+# We use a shell command to run migrations, create the admin, and then start Gunicorn
+CMD python manage.py migrate && python create_admin.py && gunicorn --bind 0.0.0.0:8000 core.wsgi:application
